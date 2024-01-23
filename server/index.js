@@ -4,7 +4,7 @@ const cors = require('cors')
 const routes = require('./routes/routes') 
 
 const app = express() 
-const port = process.env.PORT
+const port = process.env.PORT || 2000
 // middleware setup
 app.use(express.json())
 app.use(cors()) 
@@ -22,6 +22,6 @@ database.once('connected', () => {
 
 app.use('/api',routes)
 
-app.listen(2000, () => {
-    console.log(`Server running on port 2000`)
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
 })

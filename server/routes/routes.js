@@ -55,9 +55,8 @@ router.delete("/delete/:id", async (req, res) => {
   try {
     const id = req.params.id;
     const deletedData = await Model.findByIdAndDelete(id);
-    res.send("Data with ", id, " has been delete").json(deletedData);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    return res.status(400).json({ message: error.message });
   }
 });
 

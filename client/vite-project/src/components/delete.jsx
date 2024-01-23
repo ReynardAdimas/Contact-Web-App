@@ -1,8 +1,8 @@
+import {Button} from 'react-bootstrap'
+
 function Delete() {
     return(
-        <>
-            <h1>Ini delete page</h1>
-        </>
+       <Button variant='danger'>Delete</Button>
     )
 } 
 export default Delete
